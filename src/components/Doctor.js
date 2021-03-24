@@ -3,7 +3,6 @@ import React from "react";
 import { observer } from "mobx-react";
 //styles
 import { PatientWrapper } from "./styles";
-import UpdateButton from "./buttons/updateButton";
 
 import { Link } from "react-router-dom";
 

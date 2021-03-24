@@ -14,10 +14,12 @@ const UpdatePatient = (props) => {
         <Button
           variant="contained"
           style={{
-            color: "#15080B",
-            fontSize: "10px",
-            fontWeight: "bold",
-            backgroundColor: "#90CAF9",
+            color: "white",
+            fontSize: "13px",
+            backgroundColor: "#0069d9",
+            textTransform: "initial",
+            marginright: "70px",
+            marginLeft: "70px",
           }}
           color="primary"
           onClick={openModal}

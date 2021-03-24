@@ -17,10 +17,12 @@ const DeleteButton = (props) => {
       <Button
         variant="contained"
         style={{
-          color: "#15080B",
-          fontSize: "10px",
-          fontWeight: "bold",
-          backgroundColor: "#F48FB1",
+          color: "white",
+          fontSize: "13px",
+          backgroundColor: "#F50057",
+          textTransform: "initial",
+          marginright: "70px",
+          marginLeft: "70px",
         }}
         onClick={handleDelete}
       >

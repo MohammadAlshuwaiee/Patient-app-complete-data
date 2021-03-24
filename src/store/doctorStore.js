@@ -27,7 +27,6 @@ class DoctorStore {
     try {
       await axios.delete(`http://localhost:8000/doctors/${doctorId}`);
       this.Doctors = this.Doctors.filter((doctor) => doctor.id !== +doctorId);
-      // this.loading = false;
     } catch (error) {
       console.error("DoctorStore -> deleteDoctor -> error", error);
     }

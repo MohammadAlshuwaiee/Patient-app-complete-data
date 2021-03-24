@@ -1,10 +1,9 @@
 import React from "react";
-
+// observer
 import { observer } from "mobx-react";
 //styles
 import { PatientWrapper } from "./styles";
-import UpdateButton from "./buttons/updateButton";
-
+//Link director
 import { Link } from "react-router-dom";
 
 const Patient = (props) => {

@@ -10,7 +10,13 @@ const AddDoctor = () => {
   return (
     <div>
       <Button
-        style={{ marginLeft: "35px" }}
+        variant="contained"
+        color="secondary"
+        style={{
+          marginLeft: "70px",
+          fontSize: "15px",
+          textTransform: "initial",
+        }}
         onClick={openModal}
         variant="contained"
       >

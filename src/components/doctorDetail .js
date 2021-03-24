@@ -17,7 +17,6 @@ const DoctorDetail = () => {
   const doctor = doctorStore.Doctors.find(
     (doctor) => doctor.slug === doctorSlug
   );
-  console.log(doctor.DoctorName);
   if (!doctor) return <Redirect to="/doctors" />;
   return (
     <div>
@@ -26,8 +25,6 @@ const DoctorDetail = () => {
         <p className="description">
           Doctor Qualitfication: {doctor.DoctorQualitfication}
         </p>
-        {/* <p className="hospitalName">{doctor.hospital.name}</p> */}
-        {/* <p className="hospitalName">{doctor.DoctorName}</p> */}
         <ButtonWrapper style={{ display: "flex" }}>
           <UpdateButtonDoctor doctor={doctor} />
           <DeleteButton doctorId={doctor.id} />

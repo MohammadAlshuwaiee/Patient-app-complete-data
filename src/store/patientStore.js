@@ -51,7 +51,6 @@ class PatientStore {
     try {
       const response = await axios.get("http://localhost:8000/patients");
       this.Patients = response.data;
-      console.log(response.data);
     } catch (error) {
       console.error("PatientStore -> fetchPatient -> error", error);
     }

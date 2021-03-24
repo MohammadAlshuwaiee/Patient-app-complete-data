@@ -5,9 +5,12 @@ import { Dropdowndiv } from "./styles";
 const Dropdown = () => {
   const [dropdownTitle, setdropdownTitle] = useState("select");
   return (
-    <Dropdowndiv class="dropdown show">
+    <Dropdowndiv
+      style={{ marginBottom: "-30px", padding: "90px" }}
+      class="dropdown show"
+    >
       <a
-        class="btn btn-secondary dropdown-toggle"
+        class="btn btn-primary dropdown-toggle"
         href="#"
         role="button"
         id="dropdownMenuLink"

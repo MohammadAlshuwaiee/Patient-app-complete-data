@@ -11,13 +11,12 @@ import {
 import DeleteButton from "./buttons/deletebutton";
 // Stores
 import patientStore from "../store/patientStore";
-
+// update button
 import UpdateButton from "./buttons/updateButton";
 import { observer } from "mobx-react";
 
 const PatientDetail = () => {
   const { patientSlug } = useParams();
-  console.log(patientSlug);
   const patient = patientStore.Patients.find(
     (patient) => patient.slug === patientSlug
   );
@@ -29,8 +28,6 @@ const PatientDetail = () => {
         <DetailWrapperName>{patient.name}</DetailWrapperName>
         <p className="patientAge">Patient Age : {patient.age}</p>
         <p className="description">Patient Case Description : {patient.case}</p>
-        {/* <p className="hospitalName">{patient.hospital.name}</p> */}
-        {/* <p className="hospitalName">{patient.DoctorName}</p> */}
         <ButtonWrapper style={{ display: "flex" }}>
           <UpdateButton patient={patient} />
           <DeleteButton patientId={patient.id} />

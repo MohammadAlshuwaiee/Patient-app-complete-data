@@ -8,17 +8,19 @@ const UpdateDoctor = (props) => {
   const [IsOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const openModal = () => setIsOpen(true);
-  console.log(props.doctor);
   return (
     <div>
       <UpdateButton>
         <Button
           variant="contained"
           style={{
-            color: "#15080B",
-            fontSize: "10px",
-            fontWeight: "bold",
-            backgroundColor: "#90CAF9",
+            color: "white",
+            fontSize: "13px",
+            backgroundColor: "#7B1FA2",
+            textTransform: "initial",
+            marginright: "40px",
+            marginLeft: "57px",
+            marginBottom: "-6px",
           }}
           color="primary"
           onClick={openModal}

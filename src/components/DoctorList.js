@@ -14,15 +14,14 @@ import AddDoctor from "./buttons/createDoctor";
 const DoctorList = (props) => {
   const [query, setQuery] = useState("");
 
-  // const patientList = patientStore.Patients.filter((patient) =>
-  //   patient.name.includes(query)
-  // ).map((patient) => (
-  //   <Patient patient={patient} key={patient.id} setPatient={props.setPatient} />
-  // ));
-
   const doctorList = doctorStore.Doctors.map((doctor) => (
     <Doctor doctor={doctor} key={doctor.id} setDoctor={props.setDoctor} />
   ));
+
+  // const doctorList = doctorStore.Doctors.map((doctor) => (
+  //   <Doctor doctor={doctor} key={doctor.id} setDoctor={props.setDoctor} />
+  // ));
+
   return (
     <PatientListWrapper>
       <SearchBar title="search for doctor name" setQuery={setQuery} />

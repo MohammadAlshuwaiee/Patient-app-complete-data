@@ -8,22 +8,23 @@ import { ListWrapper, PatientListWrapper } from "../components/styles";
 import SearchBar from "./searchPatient";
 //import from store
 import patientStore from "../store/patientStore";
-import doctorStore from "../store/doctorStore";
+//observer
 import { observer } from "mobx-react";
+//button
 import AddPatient from "./buttons/createPatient";
 
 const PatientList = (props) => {
   const [query, setQuery] = useState("");
 
-  // const patientList = patientStore.Patients.filter((patient) =>
-  //   patient.name.includes(query)
-  // ).map((patient) => (
-  //   <Patient patient={patient} key={patient.id} setPatient={props.setPatient} />
-  // ));
-
-  const patientList = patientStore.Patients.map((patient) => (
+  const patientList = patientStore.Patients.filter((patient) =>
+    patient.name.includes(query)
+  ).map((patient) => (
     <Patient patient={patient} key={patient.id} setPatient={props.setPatient} />
   ));
+
+  // const patientList = patientStore.Patients.map((patient) => (
+  //   <Patient patient={patient} key={patient.id} setPatient={props.setPatient} />
+  // ));
 
   return (
     <PatientListWrapper>
